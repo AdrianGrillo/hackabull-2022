@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Loader } from "@googlemaps/js-api-loader"
+import 'ol/ol.css';
+import Map from 'ol/Map';
+import OSM from 'ol/source/OSM';
+import TileLayer from 'ol/layer/Tile';
+import View from 'ol/View';
+import { fromLonLat } from 'ol/proj'
 
 @Component({
   selector: 'app-map',
@@ -10,12 +15,7 @@ export class MapComponent implements OnInit {
 
   constructor() { }
 
-  map: google.maps.Map
-
-  loader = new Loader({
-    apiKey: "YOUR_API_KEY",
-    version: "weekly"
-  });
+  map: Map | undefined
 
   ngOnInit(): void {
     this.initMap()
@@ -23,11 +23,17 @@ export class MapComponent implements OnInit {
 
 
   initMap() {
-    this.loader.load().then(() => {
-      this.map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-      });
+    this.map = new Map({
+      layers: [
+        new TileLayer({
+          source: new OSM(),
+        }),
+      ],
+      target: 'map',
+      view: new View({
+        center: fromLonLat([-82.414863, 28.061899]),
+        zoom: 16
+      }),
     });
   }
 }
