@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MapComponent } from './map/map.component';
 import { PlannerComponent } from './planner/planner.component';
-import { LoginComponent } from './login/login.component';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { LoginComponent } from './login/login.component';
 import { NavComponent } from './nav/nav.component';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -26,6 +28,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
+    MatSelectModule,
+    MatFormFieldModule,
     MatButtonModule,
     MatIconModule
   ],
