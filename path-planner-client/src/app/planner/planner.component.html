@@ -1,1 +1,114 @@
-<p>planner works!</p>
+<div class="page">
+    <div class="header">
+        <h1>Planner</h1>
+    </div>
+
+    <div class="container">
+        <div class="form">
+            <p>
+            <mat-form-field class="text" appearance="legacy">
+            <mat-label>Class</mat-label>
+            <input matInput placeholder="">
+            <mat-hint>Class Name</mat-hint>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="text" appearance="legacy">
+            <mat-label>Building</mat-label>
+            <input matInput placeholder="">
+            <mat-hint>Building Code</mat-hint>
+            </mat-form-field>
+        </p>
+
+            <mat-form-field appearance="fill">
+            <mat-label>Day</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let day of Days" [value]="day.id">
+                {{day.Day}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+
+            <button (click)="addForm()"></button>
+
+            <p>
+                <mat-form-field class="text2" appearance="legacy">
+            <mat-label>Time</mat-label>
+            <input matInput placeholder="">
+            <mat-hint>Class Start Time</mat-hint>
+            </mat-form-field>
+        </p>
+
+        <mat-form-field class="AMPM" appearance="fill">
+            <mat-label>AM/PM</mat-label>
+            <mat-select>
+            <mat-option *ngFor="let time of AMPM" [value]="time.id">
+                {{time.time}}
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="form">
+            <p>
+            <mat-form-field class="text" appearance="legacy">
+            <mat-label>Class</mat-label>
+            <input matInput placeholder="">
+            <mat-hint>Class Name</mat-hint>
+            </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field class="text" appearance="legacy">
+            <mat-label>Building</mat-label>
+            <input matInput placeholder="">
+            <mat-hint>Building Code</mat-hint>
+            </mat-form-field>
+        </p>
+
+            <mat-form-field appearance="fill">
+            <mat-label>Day</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let day of Days" [value]="day.id">
+                {{day.Day}}
+                </mat-option>
+            </mat-select>
+            </mat-form-field>
+
+            <p>
+                <mat-form-field class="text2" appearance="legacy">
+            <mat-label>Time</mat-label>
+            <input matInput placeholder="">
+            <mat-hint>Class Start Time</mat-hint>
+            </mat-form-field>
+        </p>
+
+        <mat-form-field class="AMPM" appearance="fill">
+            <mat-label>AM/PM</mat-label>
+            <mat-select>
+            <mat-option *ngFor="let time of AMPM" [value]="time.id">
+                {{time.time}}
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+        </div>
+    </div>
+
+        <div class="buttons">
+            <section>
+                <div class="example-button-row">
+                <button mat-raised-button color="Save">Save</button>
+                </div>
+            </section>
+
+            <section>
+                <div class="example-button-row">
+                <button mat-raised-button color="Clear">Clear</button>
+                </div>
+            </section>
+        </div>
+</div>
