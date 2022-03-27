@@ -10,13 +10,18 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { LoginComponent } from './login/login.component';
+import { NavComponent } from './nav/nav.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    PlannerComponent
+    PlannerComponent,
+    LoginComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +31,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
