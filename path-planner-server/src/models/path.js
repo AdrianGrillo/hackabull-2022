@@ -1,16 +1,17 @@
 const mongoose = require('mongoose')
 
 const pointSchema = new mongoose.Schema({
-    timestamp: Number,
-    coords: {
-        latitude: Number,
-        longitude: Number,
-        altitude: Number,
-        accuracy: Number,
-        heading: Number,
-        speed: Number
-    }
+    className: String,
+    buildingCode: String,
+    day: String,
+    startTime: String,
+    dayType: String
 })
+
+let userIn = [pointSchema.className, pointSchema.buildingCode, pointSchema.day,
+              pointSchema.startTime, pointSchema.dayType];
+let inOrder = [];
+
 
 const trackSchema = new mongoose.Schema({
     // userId will refer to the id of a User model that's stored in the db.
