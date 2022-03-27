@@ -9,6 +9,8 @@ import { PlannerComponent } from './planner/planner.component';
 import { LoginComponent } from './login/login.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { NavComponent } from './nav/nav.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -16,17 +18,16 @@ import { MatButtonModule } from '@angular/material/button';
     AppComponent,
     MapComponent,
     PlannerComponent,
-    LoginComponent
+    LoginComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
-  ],
-  exports: [
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

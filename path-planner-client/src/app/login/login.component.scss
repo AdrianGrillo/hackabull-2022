@@ -7,4 +7,19 @@
     border: solid 1px grey;
     border-radius: 5px;
     padding: 40px;
+    color: black;
+    background: rgb(226, 226, 226);
+}
+
+h1 {
+    letter-spacing: 1px;
+}
+
+::ng-deep .mat-form-field {
+    color: black;
+    border-radius: 5px;
+}
+
+::ng-deep .mat-form-field-wrapper{
+    margin-bottom: -1.35em;
 }
