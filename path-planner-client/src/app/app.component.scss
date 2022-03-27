@@ -12,7 +12,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: calc(100vh - 60px);
   background: #EE4540;
 }
